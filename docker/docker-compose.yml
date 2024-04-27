@@ -2,8 +2,6 @@ version: "3.8"
 
 services:
 
-  # Applications
-
   catalog-service:
     depends_on:
       - bookshop-postgres
@@ -51,8 +49,6 @@ services:
       # Buildpacks environment variable to enable debug through a socket on port 9888
       - BPL_DEBUG_ENABLED=true
       - BPL_DEBUG_PORT=9888
-
-  # Backing Services
 
   bookshop-postgres:
     image: "postgres:14.10"
